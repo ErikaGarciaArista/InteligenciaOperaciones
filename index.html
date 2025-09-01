@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAA/FBMVEVHcEyamZz29/emqK+Jh4mysbK/vsDMzM/b291+fH7V1df3+PmxsLO1tLlycXTi4+Xw8O7h4eNzcnVxcHP29/b29vUdKk17gI8HHEYSIklzd4YZMFkHRIn+/v4KUZcUN2Q7RWKlpq6Pkp9sb38CKFsEdLowOlj7wAYAEUKYmqNmaneEiJWapLZbX3ABWqMDa7A+XYgBMmddbYlMVG1ne5rN2efAw8qtr7bGztyyucSOmaxHTGKfrcUKP3Z0g50rRm+ClK//66oAADrz58aXut1BbqV7q9UdY6NZkMVZfrHv8PP9zy5rns6Npsx3lLsjgsPirQ730lT1yEOxppF/gagWAAAAFnRSTlMA7Dv3Szud5vS/6UsY4u+dv7/v752dSino+wAAAf1JREFUOI29kllT2zAUhZMMJCEZoNDWshTL+77vduw4+06htP3//6UK40AIvLZn9KCZ8+ke6eo2Gv9Vre+9dDhMO+3LT+1+t/Bj27aLMALNi4/+l+lqNNqxTFWFosWjq3O/64+mruuyTBIGAYec6P7MZ4cbj8jdrfOA42Te5G/e1feHrnKQmyvLmBAD1YxOUvrT0UZRtslitkjWPxOZAAPekd5u2l1NPWWLZw/a752nLMcBAaCkNl/fX4xYz8MzTdMkZvVSYjCgKISO/fjm26z74+A/M/kj660tmQAQlO0a6MUx6y4fCPAH+wz7pCT0AXCi6xpIC4ZlH39p2gxPAj8n1USZRKhAqIGhXTHsZvG8wBPZ35P9KtEpiqLFNyCoGGa0wBI9IUycsFuDPgXSYlJVlY2zub7HeY4JnR9KWFkNdMKQ4yYYS6iLifbj6dNSoKFjdmqgHYky54/jMVlxCJAFAJAgLfK3NXAJrAEn+3YIUh3k80xChiVB3bBax1Y2eSTLRjcEhS2lojHPVD2do/KY0GhcSA6vknMCn4F5JiDTEEvKAP2377yKTBVCmqZoSOk6DWldF9S704G4IRMCqVfRlED13o/U19KRIHxhyHlkqGc+SZFUBByVxDiiUYK7c5/ctInKCIiiZfJWp//RP/SjfS0IQta5bX1q/zP9BQ3ZVAkui7P6AAAAAElFTkSuQmCC" type="image/png">
+
     <!-- Fuente e íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -26,7 +30,7 @@
         <div class='tab-link' data-tab='tab2'>Monitoreo</div>
         <div class='tab-link' data-tab='tab3'>Semáforos</div>
         <div class='tab-link' data-tab='tab5'>Regionales</div>
-        <div class='tab-link' data-tab='tab6'>Clientes</div>
+        <div class='tab-link' data-tab='tab6'>Analisis</div>
         <div class='tab-link' data-tab='tab7'>Cambios productivos</div>
         <div class='tab-link' data-tab='tab8'>Presentaciones</div>
     </div>
@@ -48,7 +52,7 @@
             <span class='label'>Proceso de visitas y diagramas</span>
         </button>
             
-        <a class='btn-big red fade-in' href='https://alvacomexico.sharepoint.com/:x:/s/ANALISISYOPTIMIZACIONOPERATIVA/EYD3CW-O2HtPiuyjQw7_-H8BGSQ9lTUCmGzIkaDQmIudVw?e=eGf7Qg'><i class='fa fa-headset'></i><span class='label'>HC de operación</span></a>
+        <a class='btn-big red fade-in' href='https://app.powerbi.com/links/0Jw-CaTl6H?ctid=923eb367-abae-4010-9989-b7cf33fb74a7&pbi_source=linkShare'><i class='fa fa-headset'></i><span class='label'>HC de operación</span></a>
         <a class='btn-big red fade-in' href='https://alvacomexico.sharepoint.com/:x:/s/ANALISISYOPTIMIZACIONOPERATIVA/EYD3CW-O2HtPiuyjQw7_-H8BGSQ9lTUCmGzIkaDQmIudVw?e=eGf7Qg'><i class='fa fa-cogs'></i><span class='label'>Infraestructura</span></a>
         <a class='btn-small red-light fade-in' href='https://alvacomexico.sharepoint.com/:x:/s/InformacinparaPresentacin/EQzdigOi_TZIiAlGwnK6HJsBPEftZcMulylUIG6sz5lHxg?e=EgflN6' target='_blank'>
         <i class='fa fa-users'></i><span class='label'>Vacantes</span></a>
@@ -84,8 +88,10 @@
     <!-- Pestaña 2 -->
     <div id='tab2' class='tab-content'>
     
-        <a class='btn-big blue fade-in flip-animation' href='https://alvacomexico.sharepoint.com/:x:/s/Check-InEntradasER/EQjqL3ThV5JPpeUlWG7Q1q8BUZ0TsZyEfOt8Rq4W1--TSQ?e=zTudAs' target='_blank'>
-        <i class='fa fa-exclamation-circle'></i><span class='label'>Faltantes</span></a>
+        <button class='btn-big red fade-in' onclick="document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active')); document.getElementById('tab13').classList.add('active');">
+            <i class='fa fa-exclamation-circle'></i>
+            <span class='label'>Faltantes</span>
+        </button>
         
         <a class='btn-big red fade-in disabled' href='https://app.powerbi.com/groups/f3db64cf-4aa9-45da-b72d-467e6332b790/reports/6a70f9e0-f92e-4476-b763-6231b545c66b/eb3b67b39956ed769800?ctid=923eb367-abae-4010-9989-b7cf33fb74a7&experience=power-bi' target='_blank'>
         <i class='fa fa-flag-usa'></i><span class='label'>PayOut Nacional <br> (En construcción) </span></a>
@@ -152,15 +158,16 @@
     
     <!-- Pestaña 6 -->
     <div id='tab6' class='tab-content'>
-    
-        <a class='btn-small green fade-in' href='https://app.powerbi.com/links/05ep3zmrJ1?ctid=923eb367-abae-4010-9989-b7cf33fb74a7&pbi_source=linkShare' target='_blank'>
-        <i class='fa fa-film'></i><span class='label'>Cinemex</span></a>
-        
-        <a class='btn-small green fade-in' href='https://alvacomexico-my.sharepoint.com/:x:/g/personal/raquel_velazquez_alvaco_com_mx/EQ_v3KhIZpFEj8V8xE0UlFcBICFJhEtUmshJ1ESATXQazg?e=AvqpKq' target='_blank'>
-        <i class='fa fa-store'></i><span class='label'>Tiendas Neto</span></a>
-        
-        <a class='btn-small green fade-in' href='https://alvacomexico.sharepoint.com/:f:/s/ANALISISYOPTIMIZACIONOPERATIVA/EvSNL2vTDbpArWnf9Yyo_7QBbtyszo9cWPe_MyS0usJdFA?e=ijrfLY' target='_blank'>
-        <i class='fa fa-map-marker-alt'></i><span class='label'>Locales</span></a>
+
+        <button class='btn-big red fade-in' onclick="document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active')); document.getElementById('tab11').classList.add('active');">
+            <i class='fa fa-id-card'></i>
+            <span class='label'>Clientes</span>
+        </button>
+
+        <button class='btn-big red fade-in' onclick="document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active')); document.getElementById('tab12').classList.add('active');">
+            <i class='fa fa-route'></i>
+            <span class='label'>Rutas y Regiones</span>
+        </button>
     
     </div>
     
@@ -201,6 +208,39 @@
         <a class='btn-small green-orange fade-in' href='https://lucid.app/lucidchart/acfc1602-661b-4a6c-b4e6-f8451c1fd6b4/edit?viewport_loc=915%2C909%2C4339%2C2126%2C8JCEzA7nv0qN&invitationId=inv_36bc67da-7204-402b-8d3a-defedb51db15' target='_blank'>
         <i class='fa fa-paperclip'></i><span class='label'>Proceso de visitas luchidchart</span></a>
     
+    </div>
+
+        <!-- Pestaña 11 -->
+    <div id='tab11' class='tab-content'>
+    
+        <a class='btn-small green fade-in' href='https://app.powerbi.com/links/05ep3zmrJ1?ctid=923eb367-abae-4010-9989-b7cf33fb74a7&pbi_source=linkShare' target='_blank'>
+        <i class='fa fa-film'></i><span class='label'>Cinemex</span></a>
+        
+        <a class='btn-small green fade-in' href='https://alvacomexico-my.sharepoint.com/:x:/g/personal/raquel_velazquez_alvaco_com_mx/EQ_v3KhIZpFEj8V8xE0UlFcBICFJhEtUmshJ1ESATXQazg?e=AvqpKq' target='_blank'>
+        <i class='fa fa-store'></i><span class='label'>Tiendas Neto</span></a>
+        
+        <a class='btn-small green fade-in' href='https://alvacomexico.sharepoint.com/:f:/s/ANALISISYOPTIMIZACIONOPERATIVA/EvSNL2vTDbpArWnf9Yyo_7QBbtyszo9cWPe_MyS0usJdFA?e=ijrfLY' target='_blank'>
+        <i class='fa fa-map-marker-alt'></i><span class='label'>Locales</span></a>
+    
+    </div>
+
+        <!-- Pestaña 12 -->
+    <div id='tab12' class='tab-content'>
+    
+        <a class='btn-big red fade-in disabled' href=' https://app.powerbi.com/groups/me/reports/1f92a7d2-82c1-4444-9f44-111c3350923c/caf2883089a85043cd85?ctid=923eb367-abae-4010-9989-b7cf33fb74a7&experience=power-bi' target='_blank'>
+        <i class='fa fa-globe'></i><span class='label'>Rutas y Regones <br> (En construcción)</span></a>
+        
+    </div>
+
+            <!-- Pestaña 13 -->
+    <div id='tab13' class='tab-content'>
+    
+        <a class='btn-big blue fade-in flip-animation' href='https://alvacomexico.sharepoint.com/:x:/s/Check-InEntradasER/EQjqL3ThV5JPpeUlWG7Q1q8BUZ0TsZyEfOt8Rq4W1--TSQ?e=zTudAs' target='_blank'>
+        <i class='fa fa-exclamation-triangle'></i><span class='label'>Faltantes Excel</span></a>
+
+                <a class='btn-big blue fade-in flip-animation' href='https://app.powerbi.com/links/Ns0d4lo8qH?ctid=923eb367-abae-4010-9989-b7cf33fb74a7&pbi_source=linkShare' target='_blank'>
+        <i class='fa fa-file-alt'></i><span class='label'>Faltantes Power Bi</span></a>
+        
     </div>
 
     <script src="scripts.js"></script>
