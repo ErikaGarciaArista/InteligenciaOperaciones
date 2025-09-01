@@ -75,7 +75,9 @@ body {
 /* Botones: unificar todas las variantes */
 button[class*='btn'], a[class*='btn'] { 
     border-radius: 16px; 
-    flex: 1 1 200px; 
+    flex: 1 1 240px;     
+    max-width: 280px;   
+    min-width: 200px;  
     margin: 15px; 
     background: #fff; 
     color: #2C2C2C; 
@@ -84,12 +86,14 @@ button[class*='btn'], a[class*='btn'] {
     line-height: normal; 
     box-shadow: 0 4px 12px rgba(0,0,0,.1); 
     transition: transform .3s ease, box-shadow .3s ease; 
-    display: inline-block; 
+    display: flex;            
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
     text-decoration: none; 
     border: none; 
     cursor: pointer; 
     font-family: Lato, Arial, sans-serif;
-    max-width: 280px;
 }
 
 button[class*='btn']:hover, a[class*='btn']:hover { 
@@ -165,4 +169,18 @@ a.btn-small.green-orange .label {
 
 .tab-content.active { 
     display: flex;
+}
+
+/* Media queries para mejor responsividad */
+@media (max-width: 1024px) {
+  button[class*='btn'], a[class*='btn'] {
+    flex: 1 1 45%;  /* dos botones por fila */
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  button[class*='btn'], a[class*='btn'] {
+    flex: 1 1 90%;  /* un botón por fila */
+  }
 }
