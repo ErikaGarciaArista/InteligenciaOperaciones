@@ -1,4 +1,4 @@
-/*  Estilos generales  */
+/* Estilos generales  */
 body { 
     margin: 0; 
     padding: 0; 
@@ -8,12 +8,12 @@ body {
     overflow: hidden;
 }
 
-/*  Layout principal  */
+/* Layout principal  */
 .main-layout {
     display: flex;
 }
 
-/*  Sidebar  */
+/* Sidebar  */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -25,9 +25,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    transition: left 0.3s ease-in-out;
+    z-index: 2000;
 }
 
-/*  Header dentro del sidebar  */
+/* Header dentro del sidebar  */
 .sidebar .header { 
     display: flex; 
     flex-direction: column;
@@ -49,7 +51,6 @@ body {
     margin: 0; 
     text-align: center; 
     letter-spacing: 1px; 
-    /* Sombra */
     text-shadow: 
         0 0 10px #40b2f5,          
         0 0 20px #9db0ef,          
@@ -58,7 +59,7 @@ body {
     font-optical-sizing: auto;
 }
 
-/* Style para la barra de titúlo cliqueada*/
+/* Barra superior */
 .bar {
     position: fixed;
     top: 0;
@@ -74,10 +75,10 @@ body {
     color: #fff;
     font-size: 0.9em;
     font-weight: 700;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
 }
 
-/*  Tabs en el sidebar  */
+/* Tabs en el sidebar  */
 .tabs { 
     display: flex; 
     flex-direction: column;
@@ -118,52 +119,17 @@ body {
 }
 
 /* Colores derivados del azul para cada pestaña */
-.tab-link.blue-1 {
-    background: #222c96;  
-    color: #e6f4ea;
-}
+.tab-link.blue-1 { background: #222c96; color: #e6f4ea; }
+.tab-link.blue-2 { background: #3324b8; color: #e6f4ea; }
+.tab-link.blue-3 { background: #0509df; color: #e6f4ea; }
+.tab-link.blue-4 { background: #145fe0; color: #e6f4ea; }
+.tab-link.blue-5 { background: #3979f1; color: #e6f4ea; }
+.tab-link.blue-6 { background: #4f73e9; color: #e6f4ea; }
+.tab-link.blue-7 { background: #5692ec; color: #e6f4ea; }
+.tab-link.blue-8 { background: #027699; color: #e6f4ea; }
+.tab-link.blue-9 { background: #5fc4ff; color: #e6f4ea; }
 
-.tab-link.blue-2 {
-    background: #3324b8;
-    color: #e6f4ea;
-}
-
-.tab-link.blue-3 {
-    background: #0509df;
-    color: #e6f4ea;
-}
-
-.tab-link.blue-4 {
-    background: #145fe0;
-    color: #e6f4ea;
-}
-
-.tab-link.blue-5 {
-    background: #3979f1;
-    color: #e6f4ea;
-}
-
-.tab-link.blue-6 {
-    background: #4f73e9;
-    color: #e6f4ea;
-}
-
-.tab-link.blue-7 {
-    background: #5692ec;
-    color: #e6f4ea;
-}
-
-.tab-link.blue-8 {
-    background: #027699; 
-    color: #e6f4ea;
-}
-
-.tab-link.blue-9 {
-    background: #5fc4ff;
-    color: #e6f4ea;
-}
-
-/*  Contenedor principal  */
+/* Contenedor principal  */
 .container { 
     margin-left: 270px; 
     padding-top: 30px; 
@@ -181,7 +147,7 @@ body {
     align-items: flex-start;
 }
 
-/*  Botones  */
+/* Botones  */
 button[class*='btn'], a[class*='btn'] { 
     border-radius: 16px; 
     width: 220px; 
@@ -223,7 +189,7 @@ button[class*='btn'] .label, a[class*='btn'] .label {
     margin-top: 10px;
 }
 
-/*  Botones verde-naranja solo para Pestaña 10  */
+/* Botones verde-naranja solo para Pestaña 10  */
 a.btn-small.green-orange { 
     background: linear-gradient(135deg, #FF8C42, #FFB347); 
     color: #fff; 
@@ -256,14 +222,14 @@ a.btn-small.green-orange .label {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-/*  Botones deshabilitados (en construcción)  */
+/* Botones deshabilitados (en construcción)  */
 .btn-big.disabled { 
     opacity: 0.5; 
     pointer-events: none; 
     cursor: default;
 }
 
-/*  Contenido de pestañas  */
+/* Contenido de pestañas  */
 .tab-content { 
     display: none; 
     flex-wrap: wrap; 
@@ -274,4 +240,73 @@ a.btn-small.green-orange .label {
 
 .tab-content.active { 
     display: flex;
+}
+
+/* ============================= */
+/* 📱 Media Queries Responsivos */
+/* ============================= */
+
+/* Laptops y tablets horizontales */
+@media (max-width: 1024px) {
+    .bar {
+        left: 0;
+        width: 100%;
+    }
+
+    .container {
+        margin-left: 0;
+        padding: 80px 15px 20px;
+    }
+}
+
+/* Tablets y móviles */
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+    .sidebar {
+        left: -100%;
+        height: 100%;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 26px;
+        color: #fff;
+        background: #0f0446;
+        border-radius: 8px;
+        padding: 8px 12px;
+        cursor: pointer;
+        z-index: 2100;
+    }
+
+    .bar {
+        left: 0;
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 60px; /* espacio para el botón ☰ */
+    }
+
+    .container {
+        margin-left: 0;
+        padding: 80px 15px 20px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabs div {
+        width: 100%;
+        text-align: center;
+    }
 }
