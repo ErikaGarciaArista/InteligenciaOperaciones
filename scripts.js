@@ -1,7 +1,5 @@
 
-// ================================
 // 📌 Toggle Hamburguesa (abrir/cerrar sidebar en móviles)
-// ================================
 const toggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
 
@@ -11,9 +9,7 @@ if (toggle) {
     });
 }
 
-// ================================
 // 📌 Tabs y contenido
-// ================================
 const tabs = document.querySelectorAll(".tab-link");     // todas las pestañas
 const contents = document.querySelectorAll(".tab-content"); // todos los contenidos
 const pageTitle = document.querySelector(".page-title"); // título en la barra

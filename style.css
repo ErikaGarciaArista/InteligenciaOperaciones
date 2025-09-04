@@ -242,10 +242,8 @@ a.btn-small.green-orange .label {
     display: flex;
 }
 
-/* ============================= */
-/* 📱 Media Queries Responsivos */
-/* ============================= */
 
+/* Media Queries Responsivos */
 /* Laptops y tablets horizontales */
 @media (max-width: 1024px) {
     .bar {
@@ -292,7 +290,7 @@ a.btn-small.green-orange .label {
         left: 0;
         width: 100%;
         justify-content: flex-start;
-        padding-left: 60px; /* espacio para el botón ☰ */
+        padding-left: 60px; 
     }
 
     .container {
