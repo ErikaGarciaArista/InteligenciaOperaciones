@@ -13,13 +13,12 @@ body {
     display: flex;
 }
 
-/* Sidebar  */
+/* Sidebar */
 .sidebar {
-    display: flex;
+display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #0f0446, #4143b1, #47aae8);
-    width: 240px; 
-    min-height: 100%;
+    width: 240px;
     padding: 15px;
     box-shadow: 4px 0 12px rgba(0,0,0,0.15);
     position: fixed;
@@ -27,6 +26,9 @@ body {
     left: 0;
     transition: left 0.3s ease-in-out;
     z-index: 2000;
+    height: 100vh;
+    overflow-y: auto; 
+
 }
 
 /* Header dentro del sidebar  */
@@ -101,7 +103,7 @@ body {
 
 .tabs div:hover { 
     background: #ffffff; 
-    color: #c500f1;
+    color: #8a2be2;
     transform: translateX(5px);
 }
 
@@ -114,32 +116,44 @@ body {
 
 .tabs .active { 
     background: #fff; 
-    color: #cc00fe; 
+    color: #8a2be2; 
     font-weight: 700;
 }
 
+/* Estilo inicial del enlace dentro de .tab-link */
+.tab-link a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Cambio de color al pasar el cursor */
+.tab-link a:hover {
+    color: #8a2be2; 
+}
+
 /* Colores derivados del azul para cada pestaña */
-.tab-link.blue-1 { background: #222c96; color: #e6f4ea; }
-.tab-link.blue-2 { background: #3324b8; color: #e6f4ea; }
-.tab-link.blue-3 { background: #0509df; color: #e6f4ea; }
-.tab-link.blue-4 { background: #145fe0; color: #e6f4ea; }
-.tab-link.blue-5 { background: #3979f1; color: #e6f4ea; }
-.tab-link.blue-6 { background: #4f73e9; color: #e6f4ea; }
-.tab-link.blue-7 { background: #5692ec; color: #e6f4ea; }
-.tab-link.blue-8 { background: #027699; color: #e6f4ea; }
-.tab-link.blue-9 { background: #5fc4ff; color: #e6f4ea; }
+.tab-link.blue-1 { background: #1E3A8A; color: #e6f4ea; }
+.tab-link.blue-2 { background: #2C4AB8; color: #e6f4ea; }
+.tab-link.blue-3 { background: #3B5CD6; color: #e6f4ea; }
+.tab-link.blue-4 { background: #4A6DEF; color: #e6f4ea; }
+.tab-link.blue-5 { background: #5A7FFB; color: #e6f4ea; }
+.tab-link.blue-6 { background: #6A90FF; color: #e6f4ea; }
+.tab-link.blue-7 { background: #7AA1FF; color: #1f2937; } 
+.tab-link.blue-8 { background: #8AB2FF; color: #1f2937; }
+.tab-link.blue-9 { background: #9AC3FF; color: #1f2937; }
+.tab-link.blue-10 { background: #ABD4FF; color: #1f2937; } 
+.tab-link.blue-11 { background: #BCE5FF; color: #1f2937; }
 
 /* Contenedor principal  */
-.container { 
-    margin-left: 270px; 
-    padding-top: 30px; 
+.container {
+    margin-left: 270px;
+    padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto; 
-    box-sizing: border-box; 
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
