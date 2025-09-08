@@ -150,7 +150,6 @@ body {
     color: #1f2937; 
 }
 
-
 /*  NAVBAR SUPERIOR  */
 .bar {
     position: fixed;
@@ -180,9 +179,8 @@ body {
     margin-left: 240px;
     padding: 80px 20px 20px;
     height: calc(100vh - 60px);
-    overflow: hidden; 
-    display: flex; 
-    flex-direction: column;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease;
 }
 
 .container.collapsed {
