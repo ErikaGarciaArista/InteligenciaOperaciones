@@ -1,49 +1,58 @@
-
-// 📌 Toggle Hamburguesa (abrir/cerrar sidebar en móviles)
 const toggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
+const tabs = document.querySelectorAll(".tab-link");
+const contents = document.querySelectorAll(".tab-content");
+const pageTitle = document.querySelector(".page-title");
 
-if (toggle) {
-    toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-    });
-}
-
-// 📌 Tabs y contenido
-const tabs = document.querySelectorAll(".tab-link");     // todas las pestañas
-const contents = document.querySelectorAll(".tab-content"); // todos los contenidos
-const pageTitle = document.querySelector(".page-title"); // título en la barra
-
-// Función para actualizar el título de la página
 function updatePageTitle() {
     const activeTab = document.querySelector(".tab-link.active");
     if (activeTab && pageTitle) {
-    const tabText = activeTab.textContent.trim();
-    pageTitle.textContent = tabText;
+        const tabText = activeTab.textContent.trim();
+        pageTitle.textContent = tabText;
     }
 }
 
-// Establecer título inicial al cargar
 updatePageTitle();
 
-// Asignar eventos de click a las pestañas
 tabs.forEach(tab => {
     tab.addEventListener("click", () => {
-    // Quitar 'active' de todas las pestañas y contenidos
-    tabs.forEach(t => t.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
 
-    // Activar pestaña clicada y su contenido
-    tab.classList.add("active");
-    document.getElementById(tab.dataset.tab).classList.add("active");
+        tab.classList.add("active");
+        const contentId = tab.dataset.tab;
+        document.getElementById(contentId).classList.add("active");
 
-    // Actualizar título
-    updatePageTitle();
+        updatePageTitle();
 
-    // 🔹 Cierra el menú en móviles después de seleccionar una pestaña
-    if (window.innerWidth <= 768 && sidebar.classList.contains("active")) {
-        sidebar.classList.remove("active");
-    }
+        if (window.innerWidth <= 768 && sidebar.classList.contains("show")) {
+            sidebar.classList.remove("show");
+        }
     });
 });
 
+if (toggle) {
+    toggle.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.toggle("show");
+        } else {
+            sidebar.classList.toggle("collapsed");
+        }
+    });
+}
+
+function handleResize() {
+    if (window.innerWidth <= 768) {
+        sidebar.classList.remove("collapsed");
+        sidebar.classList.remove("show");
+    } else if (window.innerWidth <= 1024) {
+        sidebar.classList.add("collapsed");
+        sidebar.classList.remove("show");
+    } else {
+        sidebar.classList.remove("collapsed");
+        sidebar.classList.remove("show");
+    }
+}
+
+window.addEventListener("resize", handleResize);
+window.addEventListener("load", handleResize);
