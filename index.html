@@ -37,7 +37,7 @@
         
     <!-- Barra de pestañas -->
     <div class='tabs'>
-        <div class='tab-link active' data-tab='tab0'>
+        <div class='tab-link active' data-tab='tab00'>
             <i class='fa fa-bars'></i>
             Menu
         </div>
@@ -86,8 +86,14 @@
     
 
     <div class="container">
+
+        <!-- Pestaña 00 -->
+        <div id="tab00" class="tab-content active">
+            <!-- <iframe src="https://www.alvaco.com.mx/munelocos/" width="200%" height="" frameborder="0"></iframe> -->
+        </div>
+
         <!-- Pestaña 0 -->
-        <div id='tab0' class='tab-content active'>
+        <div id='tab0' class='tab-content'>
             <button class='btn-big red fade-in' onclick="document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active')); document.getElementById('tab9').classList.add('active');">
                 <i class='fa fa-map-marked-alt'></i>
                 <span class='label'>Regiones</span>
@@ -216,9 +222,9 @@
                 <span class='label'>Hitorico de medias<br> (En construcción) </span>
             </button>
 
-            <button class='btn-big red fade-in disabled' onclick="window.open('', '_blank')">
+            <button class='btn-big red fade-in' onclick="window.open('https://app.powerbi.com/links/akKkNPiqWX?ctid=923eb367-abae-4010-9989-b7cf33fb74a7&pbi_source=linkShare', '_blank')">
                 <i class='fa-solid fa-chart-column'></i>
-                <span class='label'>Ventas VS Año pasado, cuales ganan y cuales pierden<br> (En construcción) </span>
+                <span class='label'>Ventas VS Año pasado, cuales ganan y cuales pierden </span>
             </button>
             
         
@@ -416,18 +422,18 @@
         <div id='tab14' class='tab-content'>
         
             <button class='btn-small green-orange disabled' onclick="window.open('', '_blank')">
-                |<i class='fa-solid fa-calendar-check'></i>
-                <span class='label'>Calendario Juan Carlos López</span>
+                <i class='fa-solid fa-calendar-check'></i>
+                <span class='label'>Juan Carlos López</span>
             </button>
 
             <button class='btn-small green-orange disabled' onclick="window.open('', '_blank')">
                 <i class='fa-solid fa-calendar-check'></i>
-                <span class='label'>Calendario Marco Mora</span>
+                <span class='label'>Marco Mora</span>
             </button>
 
             <button class='btn-small green-orange disabled' onclick="window.open('', '_blank')">
                 <i class='fa-solid fa-calendar-check'></i>
-                <span class='label'>Calendario .....</span>
+                <span class='label'>Supervisores regionales</span>
             </button>
 
         </div>
