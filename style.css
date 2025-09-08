@@ -83,6 +83,7 @@ body {
     font-size: 0.9em;
     font-weight: 600;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .tab-link i {
