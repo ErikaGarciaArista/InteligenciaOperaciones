@@ -280,7 +280,7 @@ button[class*='btn'].btn-small.green-orange .label {
 /* Tablets (colapsa sidebar) */
 @media (max-width: 1024px) {
     .sidebar {
-        width: 70px;
+        width: min-content;
     }
 
     .bar {
